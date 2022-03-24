@@ -1,0 +1,40 @@
+%container {
+  width: 1272px;
+  margin: 0 auto;
+}
+
+// Global Styles
+
+.active {
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  color: $heading;
+}
+
+p {
+  font-family: $font-primary;
+  color: $paragraph;
+}
+
+.btn {
+  padding: 12px 44px;
+  background: $btn-content;
+  color: $white;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid $btn-content;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: $white;
+    color: $btn-content;
+    transition: all 0.3s ease-in-out;
+  }
+}

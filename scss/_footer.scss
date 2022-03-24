@@ -1,0 +1,40 @@
+footer {
+  .container {
+    @extend %container;
+    padding: 0 40px;
+    @media (max-width: 1272px) {
+      width: 100%;
+    }
+    @media (max-width: 576px) {
+      padding: 0;
+    }
+  }
+}
+
+// Content
+
+footer {
+  background: lighten($input-bg, 2%);
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .attribution {
+    p {
+      padding: 0 20px;
+      text-align: center;
+      font-family: $font-primary;
+      color: $dark;
+      a {
+        color: $btn-content;
+        margin-left: 4px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: $attention;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}

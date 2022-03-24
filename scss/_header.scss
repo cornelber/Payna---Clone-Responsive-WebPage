@@ -1,0 +1,76 @@
+// Header
+header {
+  background: $white;
+  position: sticky;
+  top: 0;
+  margin-top: 20px;
+  width: 100%;
+  z-index: 999;
+  .container {
+    @extend %container;
+    @media (max-width: 1272px) {
+      padding: 0 40px;
+      width: 100%;
+    }
+    @media (max-width: 576px) {
+      padding: 0 24px;
+    }
+  }
+}
+
+// Navbar
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    height: 42px;
+    width: auto;
+  }
+  .nav-list {
+    display: flex;
+    li {
+      margin-left: 60px;
+      &:first-child {
+        margin-left: 0;
+      }
+      .nav-link {
+        color: $dark;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          background: $dark;
+          height: 2px;
+          width: 0%;
+          left: 0;
+          bottom: -5px;
+          border-radius: 10px;
+          transition: 0.3s;
+        }
+        &:hover::after {
+          width: 50%;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+  .hero-btn {
+    padding: 12px 49px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: $btn-content;
+      color: $white;
+      transition: all 0.3s ease-in-out;
+    }
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+}
