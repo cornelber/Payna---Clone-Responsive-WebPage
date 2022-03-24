@@ -170,6 +170,7 @@ header {
 .navbar .hero-btn {
   padding: 12px 49px;
   border-radius: 50px;
+  color: #070f18;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
